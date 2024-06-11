@@ -3,26 +3,67 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Usuarios from './Components/Usuarios.jsx';
-import Peluches from './Components/Peluches.jsx';
-import UsuarioConPeluche from './Components/UsuarioConPeluche.jsx';
-
+import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <div className = "Pantalla">
+  <BrowserRouter>
 
-          <App />
-          
-          <Peluches />
-          <Usuarios/>
-          <UsuarioConPeluche />
-    </div>
+    <App />
+  </BrowserRouter>,
+  (document.getElementById('root'))
     
-  </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+/*
+import Usuarios from './Components/Usuarios.jsx';
+import Peluches from './Components/Peluches.jsx';
+import UsuarioConPeluche from './Components/UsuarioConPeluche.jsx';
+
+
+
+
+//Nodelos de a uno componentes 
+import Usuario from './Components/Usuario.jsx';
+import Peluche from './Components/Peluche.jsx';
+import UsuarioPeluche from './Components/UsuarioPeluche.jsx';
+
+
+
+
+  <Peluches />
+          <Usuarios/>
+          <UsuarioConPeluche />
+
+           
+          <Usuario/>
+          <UsuarioPeluche />
+
+
+
+           <div className = "Pantalla">
+
+         
+          
+        
+    </div>
+
+
+
+
+    <React.StrictMode>
+
+    
+   
+    
+  </React.StrictMode>
+
+
+*/
+ 
