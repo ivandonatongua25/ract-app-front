@@ -25,9 +25,14 @@ function Usuario() {
             <div className="posicionamientousuarios">
 
             <div className="detallesUsuarios">
-            email  : {us.email} <br />
-            id  : {us.id} <br />
+                <h2 className='detalles'>Detalles</h2>
+                <div className='descripcionU'>
+                email  : {us.email} <br />
+                id : {us.id} <br />
             lastname :  {us.lastname}
+
+                </div>
+           
                 
                 
             </div>

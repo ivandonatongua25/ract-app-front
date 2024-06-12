@@ -22,10 +22,16 @@ function Peluches() {
                 
                 <div className='posicionespeluches'>
                 <div className="detallespeluches">
+                    <h2 className=' detalles'>Detalles</h2>
+                    <div className="descripcion">
                     animal : {us.animal} <br />
                     name :{us.name} <br />
                     color : {us.color}  <br />
-                    accesorio : {us.accesorio} <br />    
+                    accesorio : {us.accesorio} <br /> 
+
+
+                    </div>
+                       
                 </div>
 
                 </div>

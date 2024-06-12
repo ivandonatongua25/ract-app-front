@@ -40,8 +40,8 @@
 .detallespeluches{
     display: flex;
     background-color: rgb(218, 182, 24);
-    height: 50;
-    width: 200px;
+    height: 260px;
+    width: 237px;
     justify-content: space-around;
 
 
@@ -76,7 +76,16 @@
 
 
 }
-
+.descripcionU{
+    display: flex;
+    
+    width: 260px; height:220px;
+    align-items:flex-end ;
+    
+}
+.detalles{
+    height: 30px;
+}
 
 
 
@@ -87,18 +96,25 @@
 
 
 .enunciadoUCP{
-    color: blue;
+    color: rgb(3, 6, 192);
     justify-content: center;
 }
 
 
+.articulosUCP{
 
+    display: flex;
+    flex-direction: row;
+   
+    
+    
+}
 
 .tarjetaUCP{ 
     
     display: flex;
-    width: 340px;
-    height: 340px;
+    width: 690px;
+    height: 140px;
     margin:5px;
     justify-content: center;
 
@@ -116,17 +132,28 @@
 .detallesusuariopeluches{
     display: flex;
     background-color: rgb(218, 182, 24);
-    height: 92%;
-    width: 330px;
-    margin-right: -255px;
+    height: 292px;
+    width: 430px;
+   
+    justify-content: space-around;
     
     
 
 
 
 }
+.descripcion{
+    display: flex;
+    align-items: end;
+}
 
+/*media query*/
 
+@media screen and (min-width: 480px) {
+    #leftsidebar {width: 200px; float: left;}
+    #main {margin-left: 216px;}
+  }
+  
 
 
 
