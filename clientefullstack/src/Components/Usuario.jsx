@@ -1,4 +1,5 @@
 import React from 'react';
+import "../Assets/css/components.css";
 
 
 function Usuario() {

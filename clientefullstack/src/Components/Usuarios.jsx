@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react';
+import "../Assets/css/components.css";
 
 function Usuario() {
     const [backendData,setBackendData] = useState([{}])
@@ -9,32 +10,40 @@ function Usuario() {
     return(
         
         <div className="Usuarios">
+            <div className='enunciado'>
+                
             <h1>Todos Los Usuarios Del Sistema</h1>
         
+            </div>
+            <div className = 'articulos'>
+
             {(typeof backendData =="undefined") ?( 
             <p>Loading... no se puede cargar los datos </p>) 
             :(
-                backendData.map((us,i)=>(<p key={i}> 
-                
-            <div className="detallesUsuaer">
-            email = [{us.email}] <br />
-            id =[{us.id}] <br />
-            lastname = [{us.lastname}]
-                
-                
-            </div>    
-            
-        
+                backendData.map((us,i)=>(<p className='tarjetaU' key={i}> 
 
-        
-        
+            <div className="posicionamientousuarios">
+
+            <div className="detallesUsuarios">
+            email  : {us.email} <br />
+            id  : {us.id} <br />
+            lastname :  {us.lastname}
                 
                 
+            </div>
+                
+            
+            
+            </div>    
                 </p>)
             
             )
         )
         }
+
+
+            </div>
+            
 
         </div>   
     )  

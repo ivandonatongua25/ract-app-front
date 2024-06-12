@@ -1,0 +1,132 @@
+/*estilos de usuarios*/
+
+.detallesUsuarios{
+    display: flex;
+    background-color: rgb(127, 151, 48);
+    
+    width: 300px;
+    justify-content: space-around;
+
+}
+.posicionamientousuarios{
+    display: flex;
+    
+   
+
+    justify-content: center;
+    
+
+
+
+}
+
+.tarjetaU{
+    display: flex;
+    width: 270px;
+    height: 240px;
+    margin: 25px; padding: 4px,4%;
+
+}
+
+
+
+
+/*estilos de peluches*/
+
+.enunciado{
+    color: blue;
+}
+
+.detallespeluches{
+    display: flex;
+    background-color: rgb(218, 182, 24);
+    height: 50;
+    width: 200px;
+    justify-content: space-around;
+
+
+
+}
+.articulos{
+
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+.letras{
+    height: 50px
+    ;
+}
+
+.tarjeta{
+    display: flex;
+    width: 240px;
+    height: 240px;
+    margin: 25px;
+
+}
+
+
+.posicionespeluches{
+    display: flex;
+
+    justify-content: center;
+    
+
+
+}
+
+
+
+
+
+
+
+/*estilos de usuario con peluche */
+
+
+.enunciadoUCP{
+    color: blue;
+    justify-content: center;
+}
+
+
+
+
+.tarjetaUCP{ 
+    
+    display: flex;
+    width: 340px;
+    height: 340px;
+    margin:5px;
+    justify-content: center;
+
+}
+
+
+.posicionesUsuarioConPeluches{
+    display: flex;
+
+    justify-content: center;
+    
+
+
+}
+.detallesusuariopeluches{
+    display: flex;
+    background-color: rgb(218, 182, 24);
+    height: 92%;
+    width: 330px;
+    margin-right: -255px;
+    
+    
+
+
+
+}
+
+
+
+
+

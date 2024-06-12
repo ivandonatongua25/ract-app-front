@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react';
+import "../Assets/css/components.css";
 
 
 function Peluches() {
@@ -9,33 +10,39 @@ function Peluches() {
     return(
                 
         <div className="Peluches">
-            <h1>Todos Los Peluches Del Sistema</h1>
-        
-            {(typeof backendData =="undefined") ?( 
-            <p>Loading... no se puede cargar los datos </p>) 
-            :(
-                backendData.map((us,i)=>(<p key={i}> 
-                
-            <div className="detallespeluches">
-            animal = [{us.animal}] <br />
-            name =[{us.name}] <br />
-            color = [{us.color}]  <br />
-            accesorio = [{us.accesorio}] <br />
-                
-                
-            </div>    
-            
-            
+            <div className='enunciado'> 
+                <h1>Todos Los Peluches Del Sistema</h1>
 
-            
-        
+            </div>
+            <div className='articulos'>
+                {(typeof backendData =="undefined") ?( 
+                <p>Loading... no se puede cargar los datos </p>) 
+                :(
+                backendData.map((us,i)=>(<p className='tarjeta' key={i}> 
                 
+                <div className='posicionespeluches'>
+                <div className="detallespeluches">
+                    animal : {us.animal} <br />
+                    name :{us.name} <br />
+                    color : {us.color}  <br />
+                    accesorio : {us.accesorio} <br />    
+                </div>
+
+                </div>
+
+        
                 
                 </p>)
             
             )
-        )
-        }
+)
+}
+
+            </div>
+            
+        
+        
+        
 
         </div>   
     
