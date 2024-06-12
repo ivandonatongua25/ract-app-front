@@ -10,22 +10,24 @@ import UsuarioPeluche from './Components/UsuarioPeluche';
 import UsuarioConPeluche from './Components/UsuarioConPeluche';
 import {Route,Link} from 'react-router-dom';
 import Peluches from './Components/Peluches';
-import peluche from './Components/Peluche';
+import Peluche from './Components/Peluche';
 
 
 function App() {
   return (
     <div className="App">
+      <header>
+      <div className='peluchemenu'>
+          
+          <Peluche/>
+          </div>
+      </header>
     
-        <body>
-      
+        <body> 
             <Peluches/> 
             <Usuarios/>
             <UsuarioConPeluche/>
-          <div>
-            <peluche/>
-
-          </div>
+          
         </body>
     </div>
 

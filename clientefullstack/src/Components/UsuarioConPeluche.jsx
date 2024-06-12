@@ -22,7 +22,8 @@ function UsuarioConPeluche() {
                 
                 <div className='posicionesUsuarioConPeluches'>
                 <div className="detallesusuariopeluches">
-                    <h2 className='detalles'>Detalles</h2>
+                <h2 className=' detalles'><button><a href="../Assets/img/images.png">Detalles </a></button></h2>
+
                     <div className='descripcion'>
                     email : {us.email} <br/>
                     nombreAnimal : {us.nombreAnimal} <br />

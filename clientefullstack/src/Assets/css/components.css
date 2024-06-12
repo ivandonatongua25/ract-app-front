@@ -30,7 +30,6 @@
 
 
 
-
 /*estilos de peluches*/
 
 .enunciado{
@@ -146,6 +145,36 @@
     display: flex;
     align-items: end;
 }
+
+.peluchemenu{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    background-color: blueviolet;
+    height: 40px;
+    .homeHome{
+        
+        
+        margin-left: 50px;
+        
+        
+    }
+    .homePeluches{
+        
+        margin-inline: 40px;
+    }
+    .homeUsuarios{
+        
+        margin-right: 680px;
+
+    }
+    .login{
+        margin-left: 50px;
+
+    }
+
+}
+
 
 /*media query*/
 

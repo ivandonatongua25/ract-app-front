@@ -1,6 +1,6 @@
 import React from 'react';
 import "../Assets/css/components.css";
-
+/*
 function Peluche() {
     return(
         <ul>
@@ -10,4 +10,22 @@ function Peluche() {
     );   
 }
 
+export default Peluche;
+*/
+
+function Peluche(){
+    return(
+        <div className='peluchemenu'>
+            <button className='homeHome'>Home</button>
+            <button className='homePeluches'>Peluches</button>
+            <button className='homeUsuarios'>Usuarios</button>
+            <button className='homeRanking'>Ranking</button>
+            <button className='login'>Login </button>
+        </div>
+       
+
+    );
+    
+    
+}
 export default Peluche;
