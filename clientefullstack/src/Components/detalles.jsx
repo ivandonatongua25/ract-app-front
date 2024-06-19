@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react';
 import "../Assets/css/components.css";
 import {Link} from 'react-router-dom';
 
-function Usuario() {
+function Detalles() {
     const [backendData,setBackendData] = useState([{}])
     useEffect(()=>{
         fetch("http://localhost:2050/users").then(response => response.json()).then(data =>{setBackendData(data)} )},[])
@@ -31,7 +31,7 @@ function Usuario() {
             <h2 className=' detalles'>
                 <button>
                     
-                    <Link  to="/src/Components/detalles/">Detalles</Link>
+                    <Link target='_blank' to="/src/Components/detalles/">Detalles</Link>
 
                 </button>
             
@@ -64,13 +64,13 @@ function Usuario() {
     )  
 }
 
-export default Usuario;
+export default Detalles;
 
 
 
 /*
  <ul>
-            <li> <a href="http://localhost:2050/users" target='_blank' rel = "noreferer">Lista de Usuarios</a> </li>
+            <li> <a href="http://localhost:2050/users/:id" target='_blank' rel = "noreferer">Lista de Usuarios</a> </li>
         
         </ul>
 */

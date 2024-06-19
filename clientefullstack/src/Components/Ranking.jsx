@@ -1,10 +1,31 @@
-import React,{useEffect,useState} from 'react';
-import "../Assets/css/components.css";
-import {Link} from 'react-router-dom';
+import React
+, { useEffect } from "react";
 
+import { useState } from "react";
 
-function UsuarioConPeluche() {
+function Ranking() {
     const [count, setCount] = useState(0);
+    const [backendData,setBackendData] = useState([{}])
+    useEffect(() => {
+        //fetch fel ranking y traerlo desde el bakend
+        fetch("http://localhost:2050/ranking").then(response => response.json()).then(data =>{setBackendData(data)} )},[])
+        backendData.color = `You clicked ${count} times`;
+    ;
+    return (
+      <div>
+        <p>You clicked {count} times</p>
+        <button onClick={() => setCount(count + 1)}>
+          Click me
+        </button>
+        <p>{backendData.color}</p>
+      </div>
+    );
+  }
+  export default Ranking;
+
+  /*
+  
+function UsuarioConPeluche() {
     const [backendData,setBackendData] = useState([{}])
     useEffect(()=>{
         fetch("http://localhost:2050/conejos").then(response => response.json()).then(data =>{setBackendData(data)} )},[])
@@ -24,15 +45,7 @@ function UsuarioConPeluche() {
                 
                 <div className='posicionesUsuarioConPeluches'>
                 <div className="detallesusuariopeluches">
-                <h2 className=' detalles'>
-                <p>You clicked {count} times</p>
-        <button onClick={() => setCount(count + 1)}>
-          Click me
-        </button>
-                    <button>
-                        <a href="../Assets/img/images.png">Detalles </a>
-                    </button>
-                </h2>
+                <h2 className=' detalles'><button><a href="../Assets/img/images.png">Detalles </a></button></h2>
 
                     <div className='descripcion'>
                     email : {us.email} <br/>
@@ -40,14 +53,15 @@ function UsuarioConPeluche() {
                     imgAnimal : {us.imgAnimal} <br />
                     imgAccesorio :{us.imgAccesorio} <br />
                     color : {us.color}  <br /> 
-                    
 
                     </div>
                    
                 </div>
 
                 </div>
-    
+
+        
+                
                 </p>)
             
             )
@@ -55,41 +69,21 @@ function UsuarioConPeluche() {
 }
 
             </div>
+            
+        
+        
+        
 
         </div>   
     
 
       
-    );
-
-
-
+    )
     
 }
+  
+  */ 
 
-
-export default UsuarioConPeluche;
 /*
-
-function Ranking() {
-    const [count, setCount] = useState(0);
-    const [backendData,setBackendData] = useState([{}])
-    useEffect(() => {
-        //fetch fel ranking y traerlo desde el bakend
-        fetch("http://localhost:2050/ranking").then(response => response.json()).then(data =>{setBackendData(data)} )},[])
-        backendData.group = `You clicked ${count} times`;
-    ;
-    return (
-      <div>
-        <p>You clicked {count} times</p>
-        <button onClick={() => setCount(count + 1)}>
-          Click me
-        </button>
-        <p>{backendData.color}</p>
-      </div>
-    );
-  }
-  export default Ranking;
-
 
 */

@@ -1,5 +1,8 @@
 import React from 'react';
 import "../Assets/css/components.css";
+import {Link} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 /*
 function Peluche() {
     return(
@@ -16,16 +19,32 @@ export default Peluche;
 function Peluche(){
     return(
         <div className='peluchemenu'>
-            <button className='homeHome'>Home</button>
-            <button className='homePeluches'>Peluches</button>
-            <button className='homeUsuarios'>Usuarios</button>
-            <button className='homeRanking'>Ranking</button>
-            <button className='login'>Login </button>
-        </div>
-       
+            <button className='homeHome'>   <Link target='_blank' to ='/'>Home </Link>  </button>
+            <button className='homePeluches'><Link target = "_blank" to ='/Peluches'>Peluches</Link></button>
+            <button className='homeUsuarios'><Link target='_blank' to ='/Usuarios'> Usuarios</Link></button>
+            <button className='homeRanking'><Link target='_blank' to ='/Ranking'> Rankig</Link></button>
+            <button className='login'><Link target='_blank' to ='/Login'>Login </Link> </button>
+            <br />
+
+        </div> 
 
     );
     
     
 }
 export default Peluche;
+
+
+
+
+
+/*
+<div className='peluchemenu'>
+            <button className='homeHome'>   <Link target='_blank' to ='/'>Home </Link>  </button>
+            <button className='homePeluches'><Link target = "_blank" to ='/Peluches'>Peluches</Link></button>
+            <button className='homeUsuarios'><Link target='_blank' to ='/Usuarios'> Usuarios</Link></button>
+            <button className='homeRanking'><Link target='_blank' to ='/Ranking'> Rankig</Link></button>
+            <button className='login'><Link target='_blank' to ='/Login'>Login </Link> </button>
+            <br />
+
+        </div> */

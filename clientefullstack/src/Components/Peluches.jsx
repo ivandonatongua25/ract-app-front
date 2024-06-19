@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import "../Assets/css/components.css";
+import { Link } from 'react-router-dom';
 
 
 function Peluches() {
@@ -23,7 +24,7 @@ function Peluches() {
                 <div className='posicionespeluches'>
                 <div className="detallespeluches">
                 
-                    <h2 className=' detalles'><button>Detalles</button></h2>
+                    <h2 className=' detalles'><button><Link to = './detalles' target='_balnk'>Detalles</Link></button></h2>
                     <div className="descripcion">
                     animal : {us.animal} <br />
                     name :{us.name} <br />
@@ -52,8 +53,6 @@ function Peluches() {
 
         </div>   
     
-
-      
     )
     
 }
