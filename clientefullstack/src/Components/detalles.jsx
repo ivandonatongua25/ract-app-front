@@ -2,7 +2,8 @@ import React,{useEffect,useState} from 'react';
 import "../Assets/css/components.css";
 import {Link} from 'react-router-dom';
 
-function Detalles() {
+
+const f = function Detalles() {
     const [backendData,setBackendData] = useState([{}])
     useEffect(()=>{
         fetch("http://localhost:2050/users").then(response => response.json()).then(data =>{setBackendData(data)} )},[])
@@ -21,17 +22,17 @@ function Detalles() {
             {(typeof backendData =="undefined") ?( 
             <p>Loading... no se puede cargar los datos </p>) 
             :(
-                backendData.map((us,i)=>(<p className='tarjetaU' key={i}> 
+                backendData.map((us,i)=>(<p className='tarjetaU' key={i._id}> 
 
             <div className="posicionamientousuarios">
                 
 
             <div className="detallesUsuarios">
-             
+
             <h2 className=' detalles'>
                 <button>
                     
-                    <Link target='_blank' to="/src/Components/detalles/">Detalles</Link>
+                    <Link to="/src/Components/detalles/">Detalles</Link>
 
                 </button>
             
@@ -64,7 +65,7 @@ function Detalles() {
     )  
 }
 
-export default Detalles;
+export default f;
 
 
 

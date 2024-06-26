@@ -1,6 +1,8 @@
 import React,{useEffect,useState} from 'react';
 import "../Assets/css/components.css";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+
 
 
 function UsuarioConPeluche() {
@@ -9,12 +11,30 @@ function UsuarioConPeluche() {
     useEffect(()=>{
         fetch("http://localhost:2050/conejos").then(response => response.json()).then(data =>{setBackendData(data)} )},[])
     
+        const handleDelete = (id) => {
+          fetch(`http://localhost:2050/conejos/${id}`, {
+            method: 'DELETE',
+          })
+        .then(response => {
+            if (response.ok) {
+                setBackendData(backendData.filter(item => item.id !== id));
+            } else {
+            console.error('Error al eliminar el elemento');
+            }
+        });
+    
+        }
     return(
                 
         <div className="UsuarioConPeluches">
             <div className='enunciadoUCP'> 
                 <h1 className ="letra" >Todos Los Usuarios Con Peluches Del Sistema</h1>
+                <Link to = "/crearUsPl">
+                    <button>
+                    crear Peluche Nuevo
+                    </button>
 
+                    </Link>
             </div>
             <div className='articulosUCP'>
                 {(typeof backendData =="undefined") ?( 
@@ -24,11 +44,9 @@ function UsuarioConPeluche() {
                 
                 <div className='posicionesUsuarioConPeluches'>
                 <div className="detallesusuariopeluches">
-                <h2 className=' detalles'>
+                <h2 className=' detalles'><button onClick={() => handleDelete(us.id)}>Eliminar</button>
                 <p>You clicked {count} times</p>
-        <button onClick={() => setCount(count + 1)}>
-          Click me
-        </button>
+       
                     <button>
                         <a href="../Assets/img/images.png">Detalles </a>
                     </button>

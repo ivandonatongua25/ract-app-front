@@ -9,7 +9,7 @@ function Ranking() {
     useEffect(() => {
         //fetch fel ranking y traerlo desde el bakend
         fetch("http://localhost:2050/ranking").then(response => response.json()).then(data =>{setBackendData(data)} )},[])
-        backendData.color = `You clicked ${count} times`;
+      
     ;
     return (
       <div>
@@ -17,7 +17,7 @@ function Ranking() {
         <button onClick={() => setCount(count + 1)}>
           Click me
         </button>
-        <p>{backendData.color}</p>
+        
       </div>
     );
   }

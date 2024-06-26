@@ -1,4 +1,57 @@
-import logo from './logo.svg';
+import React from 'react';
+import {  Route,  Routes } from 'react-router-dom';
+import Home from './Components/Home';
+import About from './Components/About';
+import Contact from './Components/Contact';
+import Layout from './Components/Layaout';
+import Usuarios from './Components/Usuarios';
+import Login from './Components/Login';
+import Peluche from './Components/Peluche';
+import Peluches from './Components/Peluches';
+import Eliminar from './Components/Eliminar';
+import Usuario from './Components/Usuario';
+import UsuarioConPeluche from './Components/UsuarioConPeluche';
+import Menu from './Components/Menu';
+
+import  Ranking from './Components/Ranking';
+function App() {
+  return (
+    <div>
+      
+      
+
+    <Routes>
+        
+        <Route  path="/" element={<Layout/>} >
+          <Route path="/" element={<Home/>} />
+          <Route path="about" element={<About/>} />
+          <Route path="contact" element={<Contact/>} />
+          <Route path="*" element={<Contact/>} />
+          <Route path="usuarios" element={<Usuarios/>} />
+          <Route path="login" element={<Login/>} />
+          <Route path="ranking" element={<UsuarioConPeluche/>} />
+          <Route path="peluches" element={<Peluches/>} />
+          <Route path="eliminar" element={<Eliminar/>} />
+          <Route path="usuario" element={<Usuario/>} />
+          <Route path="crearPeluche" element={<Peluche/>} />
+          <Route path="crearUsPl" element={<Ranking/>} />
+          <Route path="menu" element={<Menu/>} />
+          
+        </Route>
+        
+        
+    </Routes>
+    
+  
+
+    </div>
+    
+  );
+}
+
+export default App;
+
+/*import logo from './logo.svg';
 import './App.css';
 
 
@@ -31,7 +84,7 @@ function App() {
   
   
   <Router>
-  <Peluche/>
+  
     
       <Routes>
       <Route path="/" element={<Home />} />
@@ -43,7 +96,7 @@ function App() {
         
       </Routes>
       
-  
+      <Peluche/>
   </Router>
 
   </div>
@@ -89,4 +142,29 @@ export default App;
         </body>
     </div>
   
+*/
+
+/*
+mport React, { useEffect, useState } from 'react';
+
+function App() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/api/data')
+      .then(response => response.json())
+      .then(data => setData(data));
+  }, []);
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Conectar Backend con Frontend</h1>
+        {data ? <p>{data.message}</p> : <p>Cargando...</p>}
+      </header>
+    </div>
+  );
+}
+
+export default App;
 */

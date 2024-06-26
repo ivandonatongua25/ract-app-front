@@ -11,7 +11,7 @@ function Home(){
             <Peluches/>
             <UsuarioConPeluche/>
 
-            <p>hola llegamos hasta aw</p>
+            
 
         </view>
 

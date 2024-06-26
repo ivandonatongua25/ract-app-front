@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import "../Assets/css/components.css";
-import {Link} from 'react-router-dom';
+
 
 function Usuario() {
     const [backendData,setBackendData] = useState([{}])
@@ -8,6 +8,18 @@ function Usuario() {
         fetch("http://localhost:2050/users").then(response => response.json()).then(data =>{setBackendData(data)} )},[])
     
        // let id;
+    
+const handleDelete = (id) => {
+    fetch(`http://localhost:2050/users/${id}`, {
+        method: 'DELETE',
+    })
+    .then(response => {
+        if (response.ok) {
+            setBackendData(backendData.filter(item => item.id !== id));
+        } else {
+            console.error('Error al eliminar el elemento');
+        }
+    })};
     return(
         
         <div className="Usuarios">
@@ -27,13 +39,10 @@ function Usuario() {
                 
 
             <div className="detallesUsuarios">
-             
+        
             <h2 className=' detalles'>
-                <button>
-                    
-                    <Link  to="/src/Components/detalles/">Detalles</Link>
-
-                </button>
+            <button onClick={() => handleDelete(us.id)}>Eliminar</button>
+                
             
             </h2>
 
@@ -46,6 +55,8 @@ function Usuario() {
                 
                 
             </div>
+           
+
                 
             
             
